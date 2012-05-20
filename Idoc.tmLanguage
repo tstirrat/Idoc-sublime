@@ -54,9 +54,21 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(HttpRelativeWebRoot)\b</string>
+			<string>\b(ssIncludeXml|ssGetXmlNodeCount|ssIncDynamicConversion|ssIncDynamicConversionByRule|ssIncDynamicConversionByRulesEngine|ssIncInlineDynamicConversion|ssIsNativeDoc|ssCheckAccessPrepareMenu|ssRandom|ssGetNodeProperty|ssGetWebsiteNodeType|ssGetCoreMajorVersion|ssSplitString|ssGetSiteProperty|ssGetFirstNodeId|ssGetRelativeNodeId|ssLoadSiteNavResultSet|ssGetServerRelativeUrl|ssGetServerRelativePath|ssGetUrlPageName|ssGetNodeLabel|ssGetNodeLabelPath|ssGetAllSites|ssLink|ssNodeLink|ssLocalizeMessage|ssWeblayoutUrl)\b(?=\()</string>
+			<key>name</key>
+			<string>support.function.sitestudio.idoc</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(HttpRelativeWebRoot|DocTypeSelected)\b</string>
 			<key>name</key>
 			<string>support.variable.core.idoc</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(HttpWebsitesRoot|HttpRelativeWebsitesRoot|HttpFragmentsRoot|HttpRelativeFragmentsRoot|SS_SERVER_NAME|HttpASPPath|ssServerRelativeSiteRoot)\b</string>
+			<key>name</key>
+			<string>support.variable.sitestudio.idoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
