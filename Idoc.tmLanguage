@@ -54,7 +54,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(ssIncludeXml|ssGetXmlNodeCount|ssIncDynamicConversion|ssIncDynamicConversionByRule|ssIncDynamicConversionByRulesEngine|ssIncInlineDynamicConversion|ssIsNativeDoc|ssCheckAccessPrepareMenu|ssRandom|ssGetNodeProperty|ssGetWebsiteNodeType|ssGetCoreMajorVersion|ssSplitString|ssGetSiteProperty|ssGetFirstNodeId|ssGetRelativeNodeId|ssLoadSiteNavResultSet|ssGetServerRelativeUrl|ssGetServerRelativePath|ssGetUrlPageName|ssGetNodeLabel|ssGetNodeLabelPath|ssGetAllSites|ssLink|ssNodeLink|ssLocalizeMessage|ssWeblayoutUrl)\b(?=\()</string>
+			<string>\b(ssIncludeXml|ssGetXmlNodeCount|ssIncDynamicConversion|ssIncDynamicConversionByRule|ssIncDynamicConversionByRulesEngine|ssIncInlineDynamicConversion|ssIsNativeDoc|ssCheckAccessPrepareMenu|ssRandom|ssGetNodeProperty|ssGetWebsiteNodeType|ssGetCoreMajorVersion|ssSplitString|ssGetWebsiteName|ssGetSiteProperty|ssGetFirstNodeId|ssGetRelativeNodeId|ssLoadSiteNavResultSet|ssGetServerRelativeUrl|ssGetServerRelativePath|ssGetUrlPageName|ssGetNodeLabel|ssGetNodeLabelPath|ssGetAllSites|ssLink|ssNodeLink|ssLocalizeMessage|ssWeblayoutUrl)\b(?=\()</string>
 			<key>name</key>
 			<string>support.function.sitestudio.idoc</string>
 		</dict>
