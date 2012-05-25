@@ -209,13 +209,23 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>&lt;@</string>
+					<string>(&lt;@)\s*(dynamichtml|table|end)\b(\s*[a-zA-Z_]\w*)?</string>
 					<key>beginCaptures</key>
 					<dict>
-						<key>0</key>
+						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.section.embedded.begin.php</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.include.idoc</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.function.include.idoc</string>
 						</dict>
 					</dict>
 					<key>comment</key>
@@ -245,6 +255,43 @@
 						<dict>
 							<key>include</key>
 							<string>source.idoc</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>&lt;@</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.section.embedded.begin.php</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>Localised string definition</string>
+					<key>end</key>
+					<string>@&gt;</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.section.embedded.end.php</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>source.localised.string</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#illegal-angle-end</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#localised-string</string>
 						</dict>
 					</array>
 				</dict>
@@ -292,15 +339,46 @@
 					<key>comment</key>
 					<string>These operators are illegal in XML compliant site studio templates and can cause issues.</string>
 					<key>match</key>
-					<string>&lt;=|&gt;=|&lt;|&gt;|&amp;&amp;|&amp;</string>
+					<string>&lt;=|&gt;=|&lt;|&gt;|&amp;</string>
 					<key>name</key>
 					<string>invalid.illegal.xml-entities</string>
 				</dict>
 			</array>
 		</dict>
+		<key>localised-string</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.function.key.localised.string</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.localised.string</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\s*(.*?)\s*(=)</string>
+					<key>name</key>
+					<string>entity.preamble.localised.string</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\{[0-9]*\}</string>
+					<key>name</key>
+					<string>constant.character.parameter.localised.string</string>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.html.idoc</string>
+	<string>text.html.idoc</string>
 	<key>uuid</key>
 	<string>c2ca286d-e38c-43a0-9070-8ec546703fe6</string>
 </dict>
