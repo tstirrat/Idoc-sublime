@@ -1,0 +1,204 @@
+{ "name": "HTML (Idoc)",
+  "scopeName": "text.html.idoc",
+  "fileTypes": ["htm", "html", "hcsp", "hcst", "idoc"],
+  "foldingStartMarker": "\\bdynamichtml\\b(\\w*)",
+  "foldingStopMarker": "\\s*end\\s*$",
+  "patterns": [
+  	{ "include" : "#idoc" },
+    {
+      "comment": "override HTML comment block patterns to allow Idoc inside",
+      "begin": "<!--",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.html"
+        }
+      },
+      "end": "-->",
+      "name": "comment.block.html",
+      "patterns": [
+        {
+          "match": "--",
+          "name": "invalid.illegal.bad-comments-or-CDATA.html"
+        },
+        {
+          "include": "#embedded-idoc"
+        }
+      ]
+    },
+    { "include": "text.html.basic" }
+  ],
+  "repository": {
+  	"embedded-idoc": {
+  		"patterns": [
+        { "include": "#idoc" }
+      ]
+  	},
+    "idoc": {
+      "patterns": [
+        {
+          "comment"   : "idoc fake comments (XML valid ones)",
+          "begin"     : "[<\\[](!--)?\\$\\s*\\b([cC]|comment)\\s?\\=\\s?\"",
+          "end"       : "\"\\s*(--|\\$)[\\]>]",
+          "name"      : "comment.block.idoc"
+        },
+        {
+          "comment":  "standard delimiters",
+          "begin"     : "(<\\$)",
+          "beginCaptures": {
+            "0" : {
+              "name": "punctuation.section.embedded.begin.php"
+            }
+          },
+          "end"       : "(\\$\\>)",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.embedded.end.php"
+            }
+          },
+          "name"      : "source.idoc",
+          "patterns"  : [
+            { "include": "#illegal-angle-end" },
+            { "include": "#illegal-square-end" },
+            { "include"  : "source.idoc" }
+          ]
+        },
+        {
+          "comment":  "HTML/XML angle delimiters",
+          "begin"     : "<!--\\$",
+          "beginCaptures": {
+            "0" : {
+              "name": "punctuation.section.embedded.begin.php"
+            }
+          },
+          "end"       : "-->",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.embedded.end.php"
+            }
+          },
+          "name"      : "source.idoc",
+          "patterns"  : [
+            { "include": "#illegal-xml" },
+            { "include": "#illegal-square-end" },
+            { "include"  : "source.idoc" }
+          ]
+        },
+        {
+          "comment":  "HTML/XML square delimiters",
+          "begin"     : "\\[!--\\$",
+          "beginCaptures": {
+            "0" : {
+              "name": "punctuation.section.embedded.begin.php"
+            }
+          },
+          "end"       : "--\\]",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.embedded.end.php"
+            }
+          },
+          "name"      : "source.idoc",
+          "patterns"  : [
+            { "include": "#illegal-xml" },
+            { "include": "#illegal-angle-end" },
+            { "include"  : "source.idoc" }
+          ]
+        },
+        {
+          "comment":  "dynamic HTML delimiters",
+          "begin"     : "(<@)\\s*(dynamichtml|table|end)\\b(\\s*[a-zA-Z_]\\w*)\\s*([\\w\\s]*)\\s?",
+          "beginCaptures": {
+            "1" : {
+              "name": "punctuation.section.embedded.begin.php"
+            },
+            "2": {
+              "name": "support.type.include.idoc"
+            },
+            "3": {
+              "name": "entity.name.function.include.idoc"
+            },
+            "4": {
+              "name": "invalid.illegal.include.garbage"
+            }
+          },
+          "end"       : "@>",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.embedded.end.php"
+            }
+          },
+          "name"      : "source.idoc",
+          "patterns"  : [
+            { "include": "#illegal-xml" },
+            { "include": "#illegal-angle-end" },
+            { "include": "source.idoc" }
+          ]
+        },
+        {
+          "comment":  "Localised string definition",
+          "begin"     : "<@",
+          "beginCaptures": {
+            "0" : {
+              "name": "punctuation.section.embedded.begin.php"
+            }
+          },
+          "end"       : "@>",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.embedded.end.php"
+            }
+          },
+          "name"      : "source.localised.string",
+          "patterns"  : [
+            { "include": "#illegal-angle-end" },
+            { "include": "#localised-string" }
+          ]
+        },
+        {
+          "comment"   : "Idoc comments (non XML)",
+          "begin"     : "\\[\\[%",
+          "end"       : "%\\]\\]",
+          "name"      : "comment.block.idoc"
+        }
+      ]
+    },
+    "illegal-xml": {
+      "patterns": [{
+        "comment": "These operators are illegal in XML compliant site studio templates and can cause issues.",
+        "match": "<=|>=|<|>|&",
+        "name": "invalid.illegal.xml-entities"
+      }]
+    },
+    "illegal-square-end": {
+      "patterns": [{
+        "match": "--\\]",
+        "name": "invalid.illegal.end-delim"
+      }]
+    },
+    "illegal-angle-end": {
+      "patterns": [{
+        "match": "-->",
+        "name": "invalid.illegal.end-delim"
+      }]
+    },
+    "localised-string": {
+      "patterns": [{
+        "match": "\\s*(.*?)\\s*(=)",
+        "captures": {
+          "1": {
+            "name": "entity.name.function.key.localised.string"
+          },
+          "2": {
+            "name": "keyword.operator.localised.string"
+          }
+        },
+        "name": "entity.preamble.localised.string"
+      },
+      {
+        "match": "\\{[0-9]*\\}",
+        "name": "constant.character.parameter.localised.string"
+      }]
+    }
+  },
+  "uuid": "c2ca286d-e38c-43a0-9070-8ec546703fe6"
+}
