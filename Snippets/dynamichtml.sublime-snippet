@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[<@ dynamichtml ${1:include_name} @> 
-		$0
+	$0
 <@ end @>]]></content>
 	<tabTrigger>dynamichtml</tabTrigger>
 	<scope>text.html.idoc</scope>
