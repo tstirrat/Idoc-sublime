@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[<@ table ${1:name} @> 
+	<table>
+		<tr>
+			<td>
+				$0
+			</td>
+		</tr>
+	</table>
+<@ end @>]]></content>
+	<tabTrigger>table</tabTrigger>
+	<scope>text.html.idoc</scope>
+	<description>Idoc table block</description>
+</snippet>

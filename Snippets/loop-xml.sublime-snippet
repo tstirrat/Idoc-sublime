@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[<!--\$ loop ${1:rsName} -->
+	$0
+<!--\$ endloop -->
+]]></content>
+	<tabTrigger>loop</tabTrigger>
+	<scope>text.html.idoc</scope>
+	<description>Idoc XML loop statement</description>
+</snippet>
