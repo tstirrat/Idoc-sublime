@@ -28,7 +28,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>&amp;&amp;</string>
+			<string>&amp;&amp;|\|\|</string>
 			<key>name</key>
 			<string>invalid.illegal.operators.idoc</string>
 		</dict>
@@ -54,7 +54,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(abortToErrorPage|cacheInclude|clearSchemaData|computeRenditionUrl|dateCurrent|docLoadResourceIncludes|docRootFilename|ssIncludeXml|ssGetDocInfo|ssGetXmlNodeCount|ssIncDynamicConversion|ssIncDynamicConversionByRule|ssIncDynamicConversionByRulesEngine|ssIncInlineDynamicConversion|ssIsNativeDoc|ssCheckAccessPrepareMenu|ssRandom|ssGetNodeProperty|ssGetWebsiteNodeType|ssGetCoreMajorVersion|ssSplitString|ssGetWebsiteName|ssGetSiteProperty|ssGetFirstNodeId|ssGetRelativeNodeId|ssLoadSiteNavResultSet|ssGetServerRelativeUrl|ssGetServerRelativePath|ssGetUrlPageName|ssGetNodeLabel|ssGetNodeLabelPath|ssGetAllSites|ssLink|ssNodeLink|ssLocalizeMessage|ssWeblayoutUrl|wcmPlaceholder|wcmElement|wcmListStart|wcmListEnd|wcmListElement|wcmListRowCount|wcmDynamicList|wcmIncludeElement|wcmDynamicConversion|abortToErrorPage|cacheInclude|ddLoadIndexedColumnResultSet|ddAppendResultSet|ddApplyTableSortToResultSet|ddGetFieldList|ddIncludePreserveValues|ddLoadIndexedColumnResultSet|ddLoadResultSet|ddMergeIndexedColumnResultSet|ddMergeResultSet|ddMergeIndexedColumnResultSet|ddSetLocal|ddSetLocalByColumnsFromFirstRow|ddSetLocalByColumnsFromFirstRowIndexed|ddSetLocalEmpty|ddSetLocalEmptyByColumns|docLoadResourceIncludes|docRootFilename|dpGet|dpPromote|dpPromoteRs|dpSet|eval|executeService|forceExpire|formatDate|formatDateOnly|formatDateOnlyFull|formatDateWithPattern|formatTimeOnly|generateUniqueId|getDebugTrace|getErrorTrace|getFieldViewValue|getFreeMemory|getHelpPage|getOptionListSize|getRequiredMsg|getTextFile|getTotalMemory|getUserValue|getValue|getValueForSpecifiedUser|idocTestForInclude|inc|incGlobal|incTemplate|isActiveTrace|isFalse|js|lc|lcCaption|loadDocMetaDefinition|loadEnterpriseSearchCollections|loadEnterpriseSearchResults|loadSearchOperatorTables|loadUserMetaDefinition|localPageType|parseDataEntryDate|parseDate|parseDateWithPattern|rptDisplayMapValue|rs|rsAddFields|rsAddFieldsWithDefaults|rsAddRowCountColumn|rsAppend|rsAppendNewRow|rsAppendRowvalues|rsCopyFiltered|rsCreateReference|rsCreateResultSet|rsDeleteRow|rsDocInfoRowAllowDisclosure|rsExists|rsFieldByIndex|rsFieldExists|rsFindRowPrimary|rsFirst|rsInsertNewRow|rsIsRowPresent|rsLoopInclude|rsLoopSingleRowInclude|rsMakeFromList|rsMerge|rsMergeDelete|rsMergeReplaceOnly|rsNext|rsNumFields|rsNumRows|rsRemove|rsRename|rsRenameField|rsSetRow|rsSort|rsSortTree|setContentType|setExpires|setHttpHeader|setMaxAge|setResourceInclude|setValue|strCenterPad|strCommaAppendNoDuplicates|strConfine|strEquals|strEqualsIgnoreCase|strGenerateRandom|strIndexOf|strLeftFill|strLeftPad|strLength|strLower|strRemoveWs|strReplace|strReplaceIgnoreCase|strRightFill|strRightPad|strSubstring|strSubstring|strTrimWs|strUpper|toInteger|trace|trace|url|urlEscape7Bit|utGetValue|utLoad|utLoadDocumentProfiles|utLoadResultSet|xml)\b(?=\()</string>
+			<string>\b(abortToErrorPage|cacheInclude|clearSchemaData|computeRenditionUrl|dateCurrent|docLoadResourceIncludes|docRootFilename|ssIncludeXml|ssGetDocInfo|ssGetXmlNodeCount|ssIncDynamicConversion|ssIncDynamicConversionByRule|ssIncDynamicConversionByRulesEngine|ssIncInlineDynamicConversion|ssIsNativeDoc|ssCheckAccessPrepareMenu|ssRandom|ssGetNodeProperty|ssGetWebsiteNodeType|ssGetCoreMajorVersion|ssSplitString|ssGetWebsiteName|ssGetSiteProperty|ssGetFirstNodeId|ssGetRelativeNodeId|ssLoadSiteNavResultSet|ssGetServerRelativeUrl|ssGetServerRelativePath|ssGetUrlPageName|ssGetNodeLabel|ssGetNodeLabelPath|ssGetAllSites|ssLink|ssNodeLink|ssLocalizeMessage|ssWeblayoutUrl|wcmPlaceholder|wcmElement|wcmListStart|wcmListEnd|wcmListElement|wcmListRowCount|wcmDynamicList|wcmIncludeElement|wcmDynamicConversion|abortToErrorPage|cacheInclude|ddLoadIndexedColumnResultSet|ddAppendResultSet|ddApplyTableSortToResultSet|ddGetFieldList|ddIncludePreserveValues|ddLoadIndexedColumnResultSet|ddLoadResultSet|ddMergeIndexedColumnResultSet|ddMergeResultSet|ddMergeIndexedColumnResultSet|ddSetLocal|ddSetLocalByColumnsFromFirstRow|ddSetLocalByColumnsFromFirstRowIndexed|ddSetLocalEmpty|ddSetLocalEmptyByColumns|docLoadResourceIncludes|docRootFilename|dpGet|dpPromote|dpPromoteRs|dpSet|eval|executeService|forceExpire|formatDate|formatDateOnly|formatDateOnlyFull|formatDateWithPattern|formatTimeOnly|generateUniqueId|getDebugTrace|getErrorTrace|getFieldViewValue|getFreeMemory|getHelpPage|getOptionListSize|getRequiredMsg|getTextFile|getTotalMemory|getUserValue|getValue|getValueForSpecifiedUser|idocTestForInclude|inc|incGlobal|incTemplate|isActiveTrace|isFalse|isTrue|js|lc|lcCaption|loadDocMetaDefinition|loadEnterpriseSearchCollections|loadEnterpriseSearchResults|loadSearchOperatorTables|loadUserMetaDefinition|localPageType|parseDataEntryDate|parseDate|parseDateWithPattern|rptDisplayMapValue|rs|rsAddFields|rsAddFieldsWithDefaults|rsAddRowCountColumn|rsAppend|rsAppendNewRow|rsAppendRowvalues|rsCopyFiltered|rsCreateReference|rsCreateResultSet|rsDeleteRow|rsDocInfoRowAllowDisclosure|rsExists|rsFieldByIndex|rsFieldExists|rsFindRowPrimary|rsFirst|rsInsertNewRow|rsIsRowPresent|rsLoopInclude|rsLoopSingleRowInclude|rsMakeFromList|rsMakeFromString|rsMerge|rsMergeDelete|rsMergeReplaceOnly|rsNext|rsNumFields|rsNumRows|rsRemove|rsRename|rsRenameField|rsSetRow|rsSort|rsSortTree|setContentType|setExpires|setHttpHeader|setMaxAge|setResourceInclude|setValue|strCenterPad|strCommaAppendNoDuplicates|strConfine|strEquals|strEqualsIgnoreCase|strGenerateRandom|strIndexOf|strLeftFill|strLeftPad|strLength|strLower|strRemoveWs|strReplace|strReplaceIgnoreCase|strRightFill|strRightPad|strSubstring|strSubstring|strTrimWs|strUpper|toInteger|trace|trace|url|urlEscape7Bit|utGetValue|utLoad|utLoadDocumentProfiles|utLoadResultSet|xml)\b(?=\()</string>
 			<key>name</key>
 			<string>support.function.core.idoc</string>
 		</dict>
@@ -89,11 +89,45 @@
 					<key>name</key>
 					<string>entity.name.function.idoc</string>
 				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.illegal.include.part</string>
+				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(dynamichtml|table)\s*([a-zA-Z_]\w*)\s*</string>
+			<string>\s*(dynamichtml|table)\s*([a-zA-Z_]\w*)\s*([\w\s]*)\s+</string>
 			<key>name</key>
 			<string>meta.include.idoc</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.idoc</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.type.function.idoc</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.idoc</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.illegal.include.garbage</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\s*(include)\s*(super\.)?([a-zA-Z_]\w*)\s*(\w*)\s?</string>
+			<key>name</key>
+			<string>meta.include.clause.idoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
