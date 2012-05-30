@@ -49,7 +49,7 @@
               "name": "punctuation.section.embedded.begin.php"
             }
           },
-          "end"       : "(\\$\\>)",
+          "end"       : "(\\$>)",
           "endCaptures": {
             "0": {
               "name": "punctuation.section.embedded.end.php"
@@ -106,7 +106,7 @@
         },
         {
           "comment":  "dynamic HTML delimiters",
-          "begin"     : "(<@)\\s*(dynamichtml|table|end)\\b(\\s*[a-zA-Z_]\\w*)\\s*([\\w\\s]*)\\s?",
+          "begin"     : "(<@)\\s*(dynamichtml|table|end)\\b(\\s*[a-zA-Z_]\\w*)?\\s*([\\w\\s]*)?\\s?",
           "beginCaptures": {
             "1" : {
               "name": "punctuation.section.embedded.begin.php"
