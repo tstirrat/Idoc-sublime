@@ -125,7 +125,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(include)\s*(super\.)?([a-zA-Z_]\w*)\s*(\w*)\s?</string>
+			<string>\s*\b(include)\s+(super\.)?([a-zA-Z_]\w*)\s*(\w*)\s?</string>
 			<key>name</key>
 			<string>meta.include.clause.idoc</string>
 		</dict>
