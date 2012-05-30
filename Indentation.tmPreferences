@@ -11,7 +11,7 @@
 		<key>increaseIndentPattern</key>
 		<string>^.*(\b(if|loop|loopwhile|else|elseif)(?!.*end(if|loop))|@\s*(dynamichtml|table)\b(?!.*end\s*@)).*$</string>
 		<key>decreaseIndentPattern</key>
-      	<string>^.*(?!\b(if|loop|loopwhile))(\$\s*(end(if|loop)|else)\b|@\s*end\s*@).*$</string>
+      	<string>^([^&lt;][^\$])*(&lt;\$\s*(end(if|loop)|else)\b|&lt;@\s*end\s*@).*$</string>
 	</dict>
 	<key>uuid</key>
 	<string>b1b3a75e-8ab2-46a5-aa13-c6b5b24fe6a5</string>
