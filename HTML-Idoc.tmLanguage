@@ -265,13 +265,23 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>&lt;@</string>
+					<string>(&lt;@)\s?(.*?)(=)</string>
 					<key>beginCaptures</key>
 					<dict>
-						<key>0</key>
+						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.section.embedded.begin.php</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.function.key.localised.string</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.localised.string</string>
 						</dict>
 					</dict>
 					<key>comment</key>
@@ -355,27 +365,8 @@
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.function.key.localised.string</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.operator.localised.string</string>
-						</dict>
-					</dict>
 					<key>match</key>
-					<string>\s*(.*?)\s*(=)</string>
-					<key>name</key>
-					<string>entity.preamble.localised.string</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\{[0-9]*\}</string>
+					<string>\{[0-9]+\}</string>
 					<key>name</key>
 					<string>constant.character.parameter.localised.string</string>
 				</dict>
