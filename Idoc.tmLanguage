@@ -33,8 +33,37 @@
 			<string>invalid.illegal.operators.idoc</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.idoc</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.type.function.idoc</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.idoc</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.illegal.include.format.idoc</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>!|%|\*|\-|\+|==|=|!=|&lt;=|&gt;=|&lt;|&gt;|&amp;|\b(gt|lt|le|ge|and|or|include|join|optList)\b</string>
+			<string>\b(include)\s+(super\.)?(\w[a-zA-Z0-9_\-]*)\s?</string>
+			<key>name</key>
+			<string>meta.include.clause.idoc</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>!|%|\*|\-|\+|==|=|!=|&lt;=|&gt;=|&lt;|&gt;|&amp;|\b(gt|lt|le|ge|eq|and|or|include|join|optList)\b</string>
 			<key>name</key>
 			<string>keyword.operator.idoc</string>
 		</dict>
@@ -96,44 +125,15 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(dynamichtml|table)\s*([a-zA-Z_]\w*)\s*([\w\s]*)\s+</string>
+			<string>\s*(dynamichtml|table)\s+([a-zA-Z_]\w*)\s*([\w\s]*)\s+</string>
 			<key>name</key>
 			<string>meta.include.idoc</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.idoc</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>support.type.function.idoc</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.idoc</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.illegal.include.garbage</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>\b(include)\s+(super\.)?([a-zA-Z_]\w*)\s*(\w*)\s?</string>
-			<key>name</key>
-			<string>meta.include.clause.idoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\s*(end)\b\s*</string>
 			<key>name</key>
-			<string>support.type.include.idoc</string>
+			<string>support.type.dynamichtml.end.idoc</string>
 		</dict>
 		<dict>
 			<key>begin</key>

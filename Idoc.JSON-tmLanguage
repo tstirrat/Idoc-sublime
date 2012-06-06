@@ -16,6 +16,25 @@
 			"match": "&&|\\|\\|",
 			"name": "invalid.illegal.operators.idoc"
 		},
+		{	
+			"match": "\\b(include)\\s+(super\\.)?(\\w[a-zA-Z0-9_\\-]*)\\s?",
+			"captures": {
+				"1": {
+					"name": "keyword.operator.idoc"
+				},
+				"2": {
+					"name": "support.type.function.idoc"
+				},
+				"3": {
+					"name": "entity.name.function.idoc"
+				},
+				"4": {
+					"name": "invalid.illegal.include.format.idoc"
+				}
+
+			},
+			"name": "meta.include.clause.idoc"
+		},
 		{
 			"match": "!|%|\\*|\\-|\\+|==|=|!=|<=|>=|<|>|&|\\b(gt|lt|le|ge|eq|and|or|include|join|optList)\\b",
 			"name": "keyword.operator.idoc"
@@ -46,7 +65,7 @@
 			"name": "constant.numeric.idoc"
 		},
 		{	
-			"match": "\\s*(dynamichtml|table)\\s*([a-zA-Z_]\\w*)\\s*([\\w\\s]*)\\s+",
+			"match": "\\s*(dynamichtml|table)\\s+([a-zA-Z_]\\w*)\\s*([\\w\\s]*)\\s+",
 			"captures": {
 				"1": {
 					"name": "support.type.include.idoc"
@@ -61,27 +80,8 @@
 			"name": "meta.include.idoc"
 		},
 		{	
-			"match": "\\b(include)\\s+(super\\.)?([a-zA-Z_]\\w*)\\s*(\\w*)\\s?",
-			"captures": {
-				"1": {
-					"name": "keyword.operator.idoc"
-				},
-				"2": {
-					"name": "support.type.function.idoc"
-				},
-				"3": {
-					"name": "entity.name.function.idoc"
-				},
-				"4": {
-					"name": "invalid.illegal.include.garbage"
-				}
-
-			},
-			"name": "meta.include.clause.idoc"
-		},
-		{	
 			"match": "\\s*(end)\\b\\s*",
-			"name": "support.type.include.idoc"
+			"name": "support.type.dynamichtml.end.idoc"
 		},
 		{
 			"name": "string.quoted.like.idoc",
