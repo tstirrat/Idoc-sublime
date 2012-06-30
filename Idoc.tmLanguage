@@ -95,7 +95,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\#active|\#local|\#env)\b</string>
+			<string>(\#active|\#local|\#env|DOC_INFO|SSContributor)\b</string>
 			<key>name</key>
 			<string>support.type.core.idoc</string>
 		</dict>
@@ -125,7 +125,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(dynamichtml|table)\s+([a-zA-Z_]\w*)\s*([\w\s]*)\s+</string>
+			<string>\s*(dynamichtml|table|dynamicdata)\s+([a-zA-Z_]\w*)\s*([\w\s]*)\s+</string>
 			<key>name</key>
 			<string>meta.include.idoc</string>
 		</dict>

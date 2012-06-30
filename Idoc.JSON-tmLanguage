@@ -57,7 +57,7 @@
 			"name": "support.constant.core.idoc"
 		},
 		{ 
-			"match": "(\\#active|\\#local|\\#env)\\b",
+			"match": "(\\#active|\\#local|\\#env|DOC_INFO|SSContributor)\\b",
 			"name": "support.type.core.idoc"
 		},
 		{
@@ -65,7 +65,7 @@
 			"name": "constant.numeric.idoc"
 		},
 		{	
-			"match": "\\s*(dynamichtml|table)\\s+([a-zA-Z_]\\w*)\\s*([\\w\\s]*)\\s+",
+			"match": "\\s*(dynamichtml|table|dynamicdata)\\s+([a-zA-Z_]\\w*)\\s*([\\w\\s]*)\\s+",
 			"captures": {
 				"1": {
 					"name": "support.type.include.idoc"
