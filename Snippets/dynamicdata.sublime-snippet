@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[<@ dynamicdata ${1:TableName} @> 
+$0
+<@ end @>]]></content>
+	<tabTrigger>dynamicdata</tabTrigger>
+	<scope>text.html.idoc</scope>
+	<description>Dynamic data block</description>
+</snippet>
