@@ -8,10 +8,31 @@
 	<string>text.html.idoc</string>
 	<key>settings</key>
 	<dict>
-		<key>increaseIndentPattern</key>
-		<string>^.*(\b(if|loop|loopwhile|else|elseif)(?!.*end(if|loop))|@\s*(dynamichtml|table)\b(?!.*end\s*@)).*$</string>
+        <!-- Combined decrease-indent pattern for HTML and IdocScript (tested in ST2) -->
 		<key>decreaseIndentPattern</key>
-      	<string>^([^&lt;][^\$])*(&lt;\$\s*(end(if|loop)|else)\b|&lt;@\s*end\s*@).*$</string>
+		<string>(?x)
+                ^\s*
+                (&lt;/(?!html)
+                  [A-Za-z0-9]+\b[^&gt;]*&gt;
+                |--&gt;
+                |&lt;\?(php)?\s+(else(if)?|end(if|for(each)?|while))
+                |\}
+                )
+            |
+                (^([^(&lt;\$)])*(&lt;\$\s*(end(if|loop)|else(if)?)\s*|&lt;@\s*end\s*@&gt;).*$)
+        </string>
+        <!-- Combined increase-indent pattern for HTML and IdocScript (tested in ST2) -->
+		<key>increaseIndentPattern</key>
+		<string>(?x)
+                ^\s*
+                &lt;(?!\?|area|base|br|col|frame|hr|html|img|input|link|meta|param|body|[^&gt;]*/&gt;)
+                  ([A-Za-z0-9]+)(?=\s|&gt;)\b[^&gt;]*&gt;(?!.*&lt;/\1&gt;)
+                |&lt;!--(?!.*--&gt;)
+                |&lt;\?php.+?\b(if|else(?:if)?|for(?:each)?|while)\b.*:(?!.*end\1)
+                |\{[^}"']*$
+            |
+                (^.*(\b(if|loop|loopwhile|else|elseif)(?!.*end(if|loop))|@\s*(dynamichtml|table)\b(?!.*end\s*@)).*$)
+        </string>
 	</dict>
 	<key>uuid</key>
 	<string>b1b3a75e-8ab2-46a5-aa13-c6b5b24fe6a5</string>
